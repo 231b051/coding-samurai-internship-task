@@ -94,3 +94,8 @@ login page:
 prodeuct listing:
 <img width="1820" height="853" alt="image" src="https://github.com/user-attachments/assets/3b7c6958-d744-4062-91db-e991b1fd3cb5" />
 
+👨‍💻 Author
+
+Ankit Raj
+
+
