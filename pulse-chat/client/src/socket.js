@@ -1,8 +1,7 @@
-import { io } from "socket.io-client";
-
-export const socket = io("http://localhost:5000", {
+io("https://pulse-backend-dxo6.onrender.com", {
   autoConnect: false
 });
+
 
 export const connectSocket = () => {
   const token = localStorage.getItem("token");
