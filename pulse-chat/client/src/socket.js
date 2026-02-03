@@ -11,4 +11,5 @@ const connectSocket = (token) => {
   socket.connect();
 };
 
-export { socket, connectSocket };
+export default socket;
+export { connectSocket };
