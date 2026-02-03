@@ -12,12 +12,20 @@ const authRoutes = require("./routes/auth");
 const app = express();
 const server = http.createServer(app);
 
-/* ================== MIDDLEWARE ================== */
-app.use(cors());
+// middleware
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
 app.use(express.json());
 
-/* ================== ROUTES ================== */
+// routes
 app.use("/auth", authRoutes);
+
+// ⬇️ NOTHING AFTER THIS EXCEPT SOCKET IF USED
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Server running");
+});
 
 /* ================== DB CONNECTION ================== */
 mongoose
