@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { socket, connectSocket } from "./socket";
+import { socket, connectSocket } from "./socket.js";
+
 import Auth from "./Auth";
 
 function App() {
