@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function Auth({ onAuthSuccess }) {
+  const API_BASE = "https://coding-samurai-internship-task-e99h.onrender.com";
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
@@ -9,9 +11,10 @@ function Auth({ onAuthSuccess }) {
   const submit = async () => {
     setError("");
 
-    const url = isLogin
-      ? "http://localhost:5000/auth/login"
-      : "http://localhost:5000/auth/register";
+   const url = isLogin
+  ? `${API_BASE}/auth/login`
+  : `${API_BASE}/auth/register`;
+
 
     try {
       const res = await fetch(url, {

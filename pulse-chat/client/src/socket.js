@@ -1,15 +1,19 @@
 import { io } from "socket.io-client";
 
-export const socket = io("http://localhost:5000", {
-  autoConnect: false
-});
+export const socket = io(
+  "https://coding-samurai-internship-task-e99h.onrender.com",
+  {
+    autoConnect: false,
+  }
+);
 
-export const connectSocket = () => {
-  const token = localStorage.getItem("token");
-
-  socket.auth = {
-    token
-  };
-
+export const connectSocket = (token) => {
+  socket.auth = { token };
   socket.connect();
 };
+
+
+
+
+
+
