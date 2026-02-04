@@ -1,7 +1,15 @@
 import { io } from "socket.io-client";
 
-const socket = io("https://pulse-backend-dxo6.onrender.com", {
-  autoConnect: false,
-});
+export const socket = io(
+  "https://coding-samurai-internship-task-mp20.onrender.com",
+  {
+    autoConnect: false,
+  }
+);
 
-export default socket;
+export const connectSocket = (token) => {
+  if (!token) return;
+
+  socket.auth = { token };
+  socket.connect();
+};
