@@ -1,5 +1,5 @@
 
-# Coding Samurai Internship Task
+# E-commerce Website
 
 ## 📌 Project Overview
 This project is a full-stack MERN E-Commerce web application developed as part of the Coding Samurai internship task.  
@@ -97,5 +97,6 @@ prodeuct listing:
 👨‍💻 Author
 
 Ankit Raj
+
 
 
